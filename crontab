@@ -1,0 +1,6 @@
+*/2 * * * * /bin/bash /root/setfanspeed.sh >> /root/setfanspeed.out
+0 * * * * curl -o /dev/null http://unlo.it/6f10c6ea243b988
+@reboot /root/set_fans_based_on_temp.sh > /root/set_fans_based_on_temp.out 2>&1
+@reboot /root/setfrontpanel.sh > /dev/null 2>&1
+@reboot /root/set_fans_based_on_temp-r730xd.sh > /root/set_fans_speed_based_on_temp-r730xd.out 2>&1
+0 * * * * reboot
